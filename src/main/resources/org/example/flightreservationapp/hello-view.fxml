@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane fx:id="mainPane"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.flightreservationapp.HelloController"
+            stylesheets="@styles.css">
+  <top>
+    <VBox alignment="CENTER" spacing="10" styleClass="top-vbox">
+      <HBox alignment="TOP_RIGHT" HBox.hgrow="ALWAYS" styleClass="top-hbox">
+        <Button fx:id="appExit" text="Exit" onAction="#handleExit" styleClass="exit-button" />
+      </HBox>
+      <Label text="Welcome to the Travel Reservation System" styleClass="main-title" />
+      <ImageView fitWidth="150" preserveRatio="true">
+        <Image url="@images/travel.png"/>
+      </ImageView>
+    </VBox>
+  </top>
+
+  <center>
+    <StackPane styleClass="center-stackpane">
+      <!-- Main Menu Buttons -->
+      <VBox fx:id="mainMenu" alignment="CENTER" spacing="10" styleClass="menu-vbox">
+        <Button fx:id="flightMenuButton" text="Flight Menu" visible="false" styleClass="menu-button" />
+        <Button fx:id="passengerMenuButton" text="Passenger Menu" visible="false" styleClass="menu-button" />
+        <Button fx:id="bookingMenuButton" text="Booking Menu" visible="false" styleClass="menu-button" />
+      </VBox>
+
+      <!-- Flight Menu Buttons -->
+      <VBox fx:id="flightMenu" alignment="CENTER" spacing="10" visible="false" styleClass="menu-vbox">
+        <Button fx:id="addFlightButton" text="Add Flight" onAction="#handleAddFlight" styleClass="menu-button" />
+        <Button fx:id="deleteFlightButton" text="Delete Flight" onAction="#handleDeleteFlight" styleClass="menu-button" />
+        <Button fx:id="viewFlightButton" text="View a Flight" onAction="#handleViewFlight" styleClass="menu-button" />
+        <Button fx:id="displayAllFlightsButton" text="Display All Flights" onAction="#handleViewAllFlights" styleClass="menu-button" />
+        <Button fx:id="backButton" text="Back" styleClass="menu-button" />
+      </VBox>
+
+      <!-- Passenger Menu Buttons -->
+      <VBox fx:id="passengerMenu" alignment="CENTER" spacing="10" visible="false" styleClass="menu-vbox">
+        <Button fx:id="addPassengerButton" text="Add Passenger" onAction="#handleAddPassenger" styleClass="menu-button" />
+        <Button fx:id="deletePassengerButton" text="Delete a Passenger" onAction="#handleDeletePassenger" styleClass="menu-button" />
+        <Button fx:id="displayAllPassengersButton" text="Display All Passengers" onAction="#handleViewAllPassengers" styleClass="menu-button" />
+        <Button fx:id="backButton2" text="Back" styleClass="menu-button" />
+      </VBox>
+
+      <!-- Booking Menu Buttons -->
+      <VBox fx:id="bookingMenu" alignment="CENTER" spacing="10" visible="false" styleClass="menu-vbox">
+        <Button fx:id="addBooking" text="Add Booking" onAction="#handleAddBooking" styleClass="menu-button" />
+        <Button fx:id="removeBooking" text="Remove Booking" onAction="#handleRemoveBooking" styleClass="menu-button" />
+        <Button fx:id="viewBookings" text="View Bookings" onAction="#handleViewBookings" styleClass="menu-button" />
+        <Button fx:id="backButton3" text="Back" styleClass="menu-button" />
+      </VBox>
+    </StackPane>
+  </center>
+
+  <bottom>
+    <HBox alignment="CENTER" spacing="10">
+      <Button fx:id="enterButton" text="Enter" styleClass="menu-button" />
+    </HBox>
+  </bottom>
+</BorderPane>

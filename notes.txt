@@ -1,0 +1,20 @@
+---------- App Improvements ----------
+
+- Input visuals
+    - once you enter the app I'm fine with the 3 menu options being in the center but once you go into one of the
+    three menus it should push the next set of options to the left side of the window to leave room for information to
+    be displayed in the middle and right sections of the window
+    - maybe the input box pop out for adding flight, passenger and booking stays the same but the displays of the other
+    functions should use up that extra screen space to better display the information as opposed to a pop out that
+    is a little small once you start to scale up
+
+
+----- PHASE 2 -----
+- Implement a simple database
+    - will have to do some research on this one but I think this feature will be very important
+
+
+----- PHASE 3 -----
+- Develop a user manuel
+    - this will be more towards the end of this project once we get all the features finalized
+
